@@ -1,26 +1,23 @@
-const quotes = [
-  "It’s not about being the best. It’s about being better than you were yesterday.",
-  "One bug at a time, one step closer to perfection.",
-  "Tiny progress is still progress.",
-  "You got this, even the stars started small.",
-  "Be kind to yourself. You’re learning.",
-  "Don’t be afraid to fail, be afraid to never try.",
-  "Strong mind, soft heart, steady hands.",
-  "Every step forward, no matter how small, matters.",
-  "Keep shining softly, your light’s enough.",
-  "Hey, don’t rush. You’re growing beautifully."
-];
+document.addEventListener('DOMContentLoaded', () => {
+  // tampilkan quotes random
+  const quotes = [
+    "It’s not about being the best. It’s about being better than you were yesterday.",
+    "One bug at a time, one step closer to perfection.",
+    "Tiny progress is still progress.",
+    "You got this, even the stars started small.",
+    "Be kind to yourself. You’re learning.",
+    "Don’t be afraid to fail, be afraid to never try.",
+    "Strong mind, soft heart, steady hands.",
+    "Every step forward, no matter how small, matters.",
+    "Keep shining softly, your light’s enough.",
+    "Hey, don’t rush. You’re growing beautifully."
+  ];
 
-const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-document.getElementById('motivation').textContent = `"${randomQuote}"`;
-const addBtn = document.getElementById('addBtn');
-const taskInput = document.getElementById('taskInput');
-const dateInput = document.getElementById('dateInput');
-const taskList = document.getElementById('taskList');
-const deleteAllBtn = document.getElementById('deleteAllBtn');
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('motivation').textContent = `"${randomQuote}"`;
 
-// ambil data dari localStorage pas halaman dibuka
-document.addEventListener('DOMContentLoaded', loadTasks);
+  loadTasks();
+});
 
 addBtn.addEventListener('click', addTask);
 deleteAllBtn.addEventListener('click', clearAll);
