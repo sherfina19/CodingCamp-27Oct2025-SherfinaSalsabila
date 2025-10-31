@@ -1,0 +1,74 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2f0000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.motivation {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-style: italic;
+  color: #ff6961; 
+  opacity: 0.9;
+}
+
+.container {
+  background: #ae2222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input, button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+#addBtn {
+  background-color: #ffffff;
+  color: rgb(13, 0, 0);
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.status {
+  font-weight: 500;
+  color: #f1f1f1;
+}
+
+tr {
+  transition: 0.3s ease;
+}
+
+th, td {
+  padding: 6px;
+  text-align: center;
+}
