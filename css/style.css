@@ -30,12 +30,6 @@ h1 {
   text-align: center;
 }
 
-.input-area {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
 input, button {
   padding: 8px;
   border: none;
@@ -43,10 +37,55 @@ input, button {
 }
 
 #addBtn {
-  background-color: #ffffff;
+  background-color: #f6efef;
   color: rgb(13, 0, 0);
   cursor: pointer;
 }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.controls input[type="text"] {
+  flex: 1;         
+  min-width: 150px;
+}
+
+.controls input[type="date"] {
+  width: 130px;}
+
+.controls button, .controls select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls select {
+  background-color: #f6efef;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 table {
   width: 100%;
@@ -61,7 +100,7 @@ input[type="checkbox"] {
 
 .status {
   font-weight: 500;
-  color: #f1f1f1;
+  color: #fefefe;
 }
 
 tr {
