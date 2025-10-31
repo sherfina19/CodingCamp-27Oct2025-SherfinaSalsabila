@@ -1,3 +1,11 @@
+const addBtn = document.getElementById('addBtn');
+const taskInput = document.getElementById('taskInput');
+const dateInput = document.getElementById('dateInput');
+const taskList = document.getElementById('taskList');
+const deleteAllBtn = document.getElementById('deleteAllBtn');
+const filterSelect = document.getElementById('filterSelect');
+
+// pas halaman dibuka
 document.addEventListener('DOMContentLoaded', () => {
   // tampilkan quotes random
   const quotes = [
@@ -19,8 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   loadTasks();
 });
 
+// tombol & event
 addBtn.addEventListener('click', addTask);
 deleteAllBtn.addEventListener('click', clearAll);
+filterSelect.addEventListener('change', renderTasks);
 
 function addTask() {
   const task = taskInput.value.trim();
@@ -48,9 +58,16 @@ function clearAll() {
 
 function renderTasks() {
   const tasks = getTasks();
+  const filter = filterSelect ? filterSelect.value : 'all';
   taskList.innerHTML = '';
 
   tasks.forEach((item, index) => {
+    // cek filter
+    if (
+      (filter === 'pending' && item.done) ||
+      (filter === 'done' && !item.done)
+    ) return;
+
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${item.task}</td>
