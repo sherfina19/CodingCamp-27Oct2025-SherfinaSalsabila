@@ -1,4 +1,4 @@
-A simple and elegant web-based to-do list app built using HTML, CSS, and JavaScript.
+A simple web-based to-do list app built using HTML, CSS, and JavaScript.
 This project helps users organize their daily tasks efficiently through a clean and intuitive interface.
 
 Features: Add new tasks easily, Edit existing tasks, Mark tasks as completed, Delete tasks instantly, Auto-save data using Local Storage, Responsive design for both desktop and mobile, Tech Stack.
